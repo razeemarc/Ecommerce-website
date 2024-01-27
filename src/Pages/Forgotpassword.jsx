@@ -2,14 +2,14 @@
 import React from 'react';
 import './Styles/LoginSignup.css';
 import illustration from '../images/forgotpassword.png';
-import Navbar from './Components/Navbar'
+
 import { useNavigate } from 'react-router-dom';
 function Login() {
     const navigate = useNavigate();
 
   return (
     <>
-    <Navbar/>
+    
     <section className='form-Card'>
       <div className="login-container">
         <div className="login-image">

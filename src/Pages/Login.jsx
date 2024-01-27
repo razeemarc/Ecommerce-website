@@ -1,11 +1,9 @@
 import React from "react";
-import "./Styles/LoginSignup.css"; // Import your CSS file
-import loginImage from "../images/login.png"; // Import your login image
-import Navbar from "./Components/Navbar";
+import "./Styles/LoginSignup.css"; 
+import loginImage from "../images/login.png"; 
 function Login() {
   return (
     <>
-      <Navbar />
       <section className="form-Card">
         <div className="login-container">
           <div className="login-image">

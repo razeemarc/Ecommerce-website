@@ -1,6 +1,6 @@
 import product1 from "../../images/product1.jpeg"
 import product2 from "../../images/product2.jpeg";
-const ProductCategory=[
+const ProductList=[
     {
         id: 1,
         title: "Polished Dry Turmeric Finger",
@@ -17,4 +17,4 @@ const ProductCategory=[
       },
 ]
 
-export default ProductCategory
+export default ProductList

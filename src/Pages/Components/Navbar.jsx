@@ -17,7 +17,7 @@ function Navbar() {
 			<span style ={{fontSize:'20px',marginLeft:'8px'}}> SHINE</span>
 			<nav ref={navRef}>
 				<a href="/home">Home</a>
-				<a href="/products">Shop</a>
+				<a href="/shop">Shop</a>
 				<a href="/#">About</a>
 				<a href="/#">Contact us</a>
 				<button
@@ -29,7 +29,7 @@ function Navbar() {
 			</nav>
 			<div className="iconsStyle">
         <FaRegHeart className="icons" />
-        <FaShoppingCart className="icons" />		
+        <FaShoppingCart className="icons" onClick={()=>navigate('/cart')} />		
       </div>
 			
 	<button onClick={()=>navigate("/login")} className="btn-login"> LOG IN </button>

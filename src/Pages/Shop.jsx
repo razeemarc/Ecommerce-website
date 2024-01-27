@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-import Navbar from "./Components/Navbar";
-import "./Styles/Products.css";
+import "./Styles/Shop.css";
 import { Card } from "react-bootstrap";
-import ProductCategory from "./Components/ProductCategory";
+import ProductCategory from "./Components/ProductList";
+import { useNavigate } from "react-router-dom";
 
-function Products() {
+function Shop() {
   const catstyle = {
     cursor: "pointer",
     paddingLeft: "15px",
   };
+
+  const Navigate =useNavigate();
+
   //filter Products based on Category
   const [data, setData] = useState(ProductCategory);
-
+ 
   const filterResult = (catItem) => {
     const result = ProductCategory.filter((curData) => {
       return curData.category.includes(catItem);
@@ -33,11 +36,10 @@ function Products() {
 
   return (
     <div>
-      <Navbar />
       <div className="container">
         <div style={{ width: "175px" }}>
           {/*Category Section */}
-          <div className="category-container">
+          <div className="categorySection-container">
             <div>
               <span className="category-title">Categories</span>
               <div style={{ paddingTop: "10px", paddingLeft: "15px" }}>
@@ -100,7 +102,7 @@ function Products() {
             </select>
           </div>
           {/*Product Section*/}
-          <div className="product-container">
+          <div className="shop-container" >
             {data.map((values) => (
               <div key={values.id}>
                 <Card
@@ -110,12 +112,12 @@ function Products() {
                     borderRadius: "10px",
                   }}
                 >
-                  <Card.Img variant="top" src={values.image} />
+                  <Card.Img variant="top" src={values.image} style={{cursor:'pointer'}} onClick={()=>Navigate(`/product/${values.id}`)}/>
                   <Card.Body>
                     <Card.Title>{values.title}</Card.Title>
                     <p>Price: {values.price}/-</p>
 
-                    <button varient="primary" className="buttonStyle">
+                    <button varient="primary" className="buttonStyle" >
                       Add to Cart
                     </button>
                   </Card.Body>
@@ -129,4 +131,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Shop;
