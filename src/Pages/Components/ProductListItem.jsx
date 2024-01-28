@@ -7,7 +7,7 @@ function ProductListItem(values) {
       <Card
         className="d-flex flex-row align-items-center flex-wrap justify-content-between"
         style={{
-          borderRadius: "9px",
+          borderRadius:'9px'
         }}
       >
         <img

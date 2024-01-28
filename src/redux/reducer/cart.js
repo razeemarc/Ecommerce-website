@@ -10,9 +10,11 @@ export const cartSlice = createSlice({
             state.list = [...state.list,{...payload,count : 1}];
         },
         removeItem:(state,{payload})=>{
+            //Finding Index of the product
             const index = state.list.findIndex(
                 (product) => product.id === payload.id
             );
+            //Remove Product From the list
             state.list= [
                 ...state.list.slice(0,index),
                 ...state.list.slice(index + 1),

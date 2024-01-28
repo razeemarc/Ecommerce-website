@@ -35,9 +35,11 @@ var cartSlice = (0, _toolkit.createSlice)({
     },
     removeItem: function removeItem(state, _ref2) {
       var payload = _ref2.payload;
+      //Finding Index of the product
       var index = state.list.findIndex(function (product) {
         return product.id === payload.id;
-      });
+      }); //Remove Product From the list
+
       state.list = [].concat(_toConsumableArray(state.list.slice(0, index)), _toConsumableArray(state.list.slice(index + 1)));
     },
     modifyItem: function modifyItem(state, _ref3) {

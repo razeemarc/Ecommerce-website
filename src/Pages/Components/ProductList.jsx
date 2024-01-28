@@ -15,6 +15,6 @@ const ProductList=[
         image: product2,
         category:"Dried",
       },
-]
+];
 
 export default ProductList

@@ -9,6 +9,8 @@ import Shop from './Pages/Shop';
 import Product from './Pages/Product';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from "./redux/store"
+import Checkout from './Pages/Checkout'
+import Success from './Pages/Success';
 import { Provider } from 'react-redux';
 
 import Navbar from './Pages/Components/Navbar'
@@ -28,6 +30,12 @@ function App () {
           <Route path="/product/:id" element={<Product/>} />
           <Route path="/shop" element={<Shop/>} />
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/checkout/" >
+            <Route path="" element={<Checkout/>} />
+            <Route path=":id" element={<Checkout/>} />
+         </Route>
+         <Route path="/success" element={<Success/>} />
+
        </Routes>    
        </div>
      </Provider>

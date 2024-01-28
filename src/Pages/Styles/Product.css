@@ -1,0 +1,13 @@
+.product-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.productImage-section{
+
+}
+.product-details{
+  display: inline-flex;
+  
+}
