@@ -16,6 +16,7 @@
 }
 
 header {
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -58,11 +59,13 @@ nav {
 }
 
 @media only screen and (max-width: 1024px) {
+	
 	header .nav-btn {
 	  visibility: visible;
 	  opacity: 1;
 		position:fixed;
 		left: 0;
+
 
 	}
   
@@ -70,11 +73,10 @@ nav {
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
+		width: 50%;
 		height: 100%;
-		background-color: #fff; /* Adjust background color as needed */
+		background-color: #fff;
 		flex-direction: column;
-		align-items: flex-start; /* Left-align items */
 		transform: translateX(-100%);
 		transition: transform 0.3s ease-in-out;
 	  }
@@ -82,19 +84,37 @@ nav {
 	  nav.responsive_nav {
 		transform: translateX(0);
 		background-color: #fff;
+		z-index: 4;
 	  }
   
 	  nav a {
-		padding: 15px;
-		width: 100%;
+		
+		padding: 0px 0px 15px 5px;
+		
+		
 		text-align: center;
-		border-bottom: 1px solid #ccc; /* Add a border between menu items */
+		border-bottom: 1px solid #ccc; 
+		
 	  }
-	
+	  .navbarMenu{
+		position: absolute;
+		top:100px
+	  }
+	  .navbarMenu2{
+		position: absolute;
+		top:150px
+	  } .navbarMenu3{
+		position: absolute;
+		top:200px
+	  } .navbarMenu4{
+		position: absolute;
+		top:250px
+	  }
 	  .nav-close-btn {
 		position: absolute;
 		top: 10px;
-		right: 10px;
+		right:-20px;
+		padding-right: 0%;
 	  }
   }
   
@@ -134,7 +154,7 @@ nav {
   @media (max-width: 800px) {
 	.iconsStyle {
 	  justify-content: flex-end;
-	  margin-right: -110px;
+	  margin-right: -50px;
 	}
   
 	.icons {
@@ -142,4 +162,15 @@ nav {
 	  margin-right: 10px;
 	}
   }
-  
+  .desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: rgb(50, 50, 50)
+}
+@media (max-width:800px){
+	.hide-on-small-screen{
+		display:none;
+	}
+}
