@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Success() {
   const [count, setCount] = useState(15);
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     setInterval(() => {setCount((count) => count - 1); }, 1000);

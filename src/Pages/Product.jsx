@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import ProductList from "./Components/ProductList";
 import { useDispatch,useSelector } from "react-redux";
 import { addItem } from "../redux/reducer/cart";
+import Navbar from "./Components/Navbar";
 import './Styles/Product.css'
 
 function Product() {
@@ -25,6 +26,8 @@ function Product() {
 
   return (
     <>
+    <Navbar/>
+    <div style={{marginTop: "120px"}}>
     {alert && <span className="alert alert-success">Item added to Cart</span>}
     <section>
 <div className="product-container">
@@ -55,6 +58,7 @@ function Product() {
       </div>
       </div>
       </section>
+    </div>
     </>
   );
 }

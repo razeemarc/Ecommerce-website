@@ -4,6 +4,7 @@ import ProductListItem from "./Components/ProductListItem";
 import { modifyItem } from "../redux/reducer/cart";
 import { useNavigate, useParams } from "react-router-dom";
 import ProductList from "./Components/ProductList";
+import Navbar from "./Components/Navbar";
 function Checkout() {
   const params = useParams();
   const list = useSelector((state) => state.cart.list);
@@ -56,6 +57,8 @@ function Checkout() {
     ])  };
   return (
     <>
+    <Navbar/>
+    <div style={{marginTop: "120px"}}>
       <div className="d-flex justify-content-center mt-1">
         <h4>Checkout</h4>
       </div>
@@ -80,6 +83,7 @@ function Checkout() {
       ) : (
         <h3>No item in the Checkout</h3>
       )}
+    </div>
     </>
   );
 }

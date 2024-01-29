@@ -2,10 +2,13 @@
 import React from 'react';
 import './Styles/LoginSignup.css'; // Import your CSS file
 import signupImage from '../images/signup.png'; // Import your login image
+import Navbar from './Components/Navbar';
 function Resetpassword() {
   return (
     <>
-    <section className='form-Card'>
+    
+      <Navbar/>
+    <section className='form-Card' style={{marginTop: "120px"}}>
       <div className="login-container">
         <div className="login-image">
           <img src={signupImage} height={700} width={700} alt="Login" />

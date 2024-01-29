@@ -13,13 +13,11 @@ import Checkout from './Pages/Checkout'
 import Success from './Pages/Success';
 import { Provider } from 'react-redux';
 
-import Navbar from './Pages/Components/Navbar'
 function App () {
  return (
     <Provider store={store}>
       
       <div >  
-      <Navbar/>
        <Routes >
           <Route path="/" element={<Home/>} />
           <Route path="/home" element={<Home/>} />

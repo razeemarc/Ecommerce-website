@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProductListItem from "./Components/ProductListItem";
 import { modifyItem, removeItem } from "../redux/reducer/cart";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 function Cart() {
   const list = useSelector((state) => state.cart.list);
   const dispatch = useDispatch();
@@ -22,6 +23,9 @@ function Cart() {
   };
   return (
     <>
+      <Navbar/>
+    
+    <div style={{marginTop: "120px"}}>
       <div className="d-flex justify-content-center mt-1">
         <h4>Your cart items</h4>
       </div>
@@ -41,6 +45,7 @@ function Cart() {
       ) : (
         <h3>No item in the cart</h3>
       )}
+    </div>
     </>
   );
 }

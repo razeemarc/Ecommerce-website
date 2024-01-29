@@ -2,7 +2,7 @@
 import React from 'react';
 import './Styles/LoginSignup.css';
 import illustration from '../images/forgotpassword.png';
-
+import Navbar from './Components/Navbar';
 import { useNavigate } from 'react-router-dom';
 function Login() {
     const navigate = useNavigate();
@@ -10,7 +10,8 @@ function Login() {
   return (
     <>
     
-    <section className='form-Card'>
+      <Navbar/>
+    <section className='form-Card' style={{marginTop: "120px"}}>
       <div className="login-container">
         <div className="login-image">
           <img src={illustration} height={700} width={700} alt="Login" />

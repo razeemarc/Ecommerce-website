@@ -1,10 +1,13 @@
 import React from "react";
 import "./Styles/LoginSignup.css"; 
 import loginImage from "../images/login.png"; 
+import Navbar from "./Components/Navbar";
 function Login() {
   return (
     <>
-      <section className="form-Card">
+    
+      <Navbar/>
+      <section className="form-Card" style={{marginTop: "120px"}}>
         <div className="login-container">
           <div className="login-image">
             <img src={loginImage} height={700} width={700} alt="Login" />

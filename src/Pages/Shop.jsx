@@ -3,6 +3,7 @@ import "./Styles/Shop.css";
 import { Card } from "react-bootstrap";
 import ProductCategory from "./Components/ProductList";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 
 function Shop() {
   const catstyle = {
@@ -36,7 +37,9 @@ function Shop() {
 
   return (
     <div>
-      <div className="container">
+    
+    <Navbar/>
+      <div className="container" style={{marginTop: "120px"}}>
         <div style={{ width: "175px" }}>
           {/*Category Section */}
           <div className="categorySection-container">
