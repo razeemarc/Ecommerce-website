@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Styles/Shop.css";
 import { Card } from "react-bootstrap";
-import ProductCategory from "./Components/ProductList";
+import ProductList from "./Components/ProductList";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 
@@ -14,17 +14,17 @@ function Shop() {
   const Navigate =useNavigate();
 
   //filter Products based on Category
-  const [data, setData] = useState(ProductCategory);
+  const [data, setData] = useState(ProductList);
  
   const filterResult = (catItem) => {
-    const result = ProductCategory.filter((curData) => {
+    const result = ProductList.filter((curData) => {
       return curData.category.includes(catItem);
     });
     setData(result);
   };
   //function definition for Dropdown menu
   const defaultChange = () => {
-    setData(ProductCategory);
+    setData(ProductList);
   };
   const sortByPriceHighToLow = () => {
     const result = [...data].sort((a, b) => b.price - a.price);

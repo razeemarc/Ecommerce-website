@@ -6,7 +6,8 @@ const ProductList=[
         title: "Polished Dry Turmeric Finger",
         price: 213,
         image: product1,
-        category:"Turmeric"
+        category:"Turmeric",
+        description:"Experience the rich goodness of our Polished Dry Turmeric Fingers – a golden delight sourced with care. Renowned for its distinctive flavor and potent health benefits, our premium-quality turmeric fingers are meticulously processed and polished to perfection. Elevate your culinary creations and embrace the holistic wellness that this vibrant spice brings to your kitchen."
       },
       {
         id: 2,
@@ -14,6 +15,8 @@ const ProductList=[
         price: 270,
         image: product2,
         category:"Dried",
+        description:"Experience the rich goodness of our Polished Dry Turmeric Fingers – a golden delight sourced with care. Renowned for its distinctive flavor and potent health benefits, our premium-quality turmeric fingers are meticulously processed and polished to perfection. Elevate your culinary creations and embrace the holistic wellness that this vibrant spice brings to your kitchen."
+
       },
 ];
 

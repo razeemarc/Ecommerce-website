@@ -1,13 +1,42 @@
+:root {
+  --mainColor: #FAFAFA;
+  --hoverColor: #283dfc;
+  --mainColorLight: #bfd7ff;
+  --secondaryColor: #5465ff;
+  --textColor: #000000;
+}
+
 .product-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
+    padding: 70px;
+    justify-content: center;
 
+}
 .productImage-section{
+  margin-right: 40px;
+}
+
+.product-details{
+
+  width: 300px;
+  
+}
+
+.price-heading {
+  color: rgb(241, 35, 35);
+}
+.product-buttons{
+  margin-top: 60px;
+  
+}
+.goToCart-button {
+  background-color: var(--mainColor);
+  border: 1px  solid var(--secondaryColor) ;
+  color: var(--hoverColor);
+  padding: 10px 20px;
 
 }
-.product-details{
-  display: inline-flex;
-  
+.goToCart-button:hover{
+  background-color: var(--mainColorLight);
 }
