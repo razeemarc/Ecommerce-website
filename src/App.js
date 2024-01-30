@@ -12,6 +12,7 @@ import store from "./redux/store"
 import Checkout from './Pages/Checkout'
 import Success from './Pages/Success';
 import { Provider } from 'react-redux';
+import Wishlist from './Pages/Wishlist';
 
 function App () {
  return (
@@ -33,7 +34,7 @@ function App () {
             <Route path=":id" element={<Checkout/>} />
          </Route>
          <Route path="/success" element={<Success/>} />
-
+         <Route path="/wishlist" element={<Wishlist/>} />
        </Routes>    
        </div>
      </Provider>

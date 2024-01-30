@@ -1,11 +1,12 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import '../Styles/Cart.css'
 
 function ProductListItem(values) {
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center ">
       <Card
-        className="d-flex flex-row align-items-center flex-wrap justify-content-between"
+        className="d-flex flex-row align-items-center flex-wrap justify-content-between ProductItemStyle"
         style={{
           borderRadius:'9px'
         }}
@@ -22,18 +23,18 @@ function ProductListItem(values) {
 
         <span style={{ marginRight: "3rem" }}>Price: {values.price}/-</span>
         <button
-          style={{ marginRight: "3rem" }}
-          className="btn btn-danger"
+          style={{ marginRight: "1rem",border:'1px solid grey' }}
+          className="btn "
           onClick={values.decrementItem}
         >
           -
         </button>
         
-        <span style={{ marginRight: "3rem" }}>Quantity:{values.count}</span>
+        <span style={{ marginRight: "1rem" }}>Quantity:{values.count}</span>
        
         <button
-          style={{ marginRight: "3rem" }}
-          className="btn btn-danger"
+          style={{ marginRight: "3rem" ,border:'1px solid grey'}}
+          className="btn "
           onClick={values.incrementItem}
         >
           +

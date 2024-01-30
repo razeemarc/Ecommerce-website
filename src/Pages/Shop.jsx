@@ -5,13 +5,15 @@ import ProductList from "./Components/ProductList";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 
+
+
 function Shop() {
   const catstyle = {
     cursor: "pointer",
     paddingLeft: "15px",
   };
 
-  const Navigate =useNavigate();
+  const navigate =useNavigate();
 
   //filter Products based on Category
   const [data, setData] = useState(ProductList);
@@ -41,6 +43,9 @@ function Shop() {
     <Navbar/>
       <div className="container" style={{marginTop: "120px"}}>
         <div style={{ width: "175px" }}>
+        {alert && (
+          <span className="alert alert-success">Item added to Cart</span>
+        )}
           {/*Category Section */}
           <div className="categorySection-container">
             <div>
@@ -115,14 +120,14 @@ function Shop() {
                     borderRadius: "10px",
                   }}
                 >
-                  <Card.Img variant="top" src={values.image} style={{cursor:'pointer'}} onClick={()=>Navigate(`/product/${values.id}`)}/>
+                  <Card.Img variant="top" src={values.image} style={{cursor:'pointer'}} onClick={()=>navigate(`/product/${values.id}`)}/>
                   <Card.Body>
                     <Card.Title>{values.title}</Card.Title>
                     <p>Price: {values.price}/-</p>
 
-                    <button varient="primary" className="buttonStyle" >
-                      Add to Cart
-                    </button>
+                
+                
+             
                   </Card.Body>
                 </Card>
               </div>

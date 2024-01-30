@@ -59,8 +59,8 @@ function Checkout() {
     <>
     <Navbar/>
     <div style={{marginTop: "120px"}}>
-      <div className="d-flex justify-content-center mt-1">
-        <h4>Checkout</h4>
+    <div className="d-flex justify-content-center pt-4 pb-4">
+        {state.length > 0 ? (<h4>Checkout</h4>):''}
       </div>
       {state.length > 0 ? (
         <>
@@ -73,15 +73,17 @@ function Checkout() {
               removeItemFromCart={() => removeItemFromCart(item)}
             />
           ))}
+          <div className='checkout-button'>
           <button
             className="buttonStyle "
             onClick={() => navigate("/success")}
           >
            place Order
           </button>
+          </div>
         </>
       ) : (
-        <h3>No item in the Checkout</h3>
+        <h3 className="d-flex justify-content-center ">No item in the Checkout</h3>
       )}
     </div>
     </>

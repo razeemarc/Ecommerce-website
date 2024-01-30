@@ -39,7 +39,7 @@ function Product() {
               <img src={values.image} alt="product" />
             </div>
 
-            <div classname="product-details">
+            <div >
               <h3>{values.title}</h3>
               <h4 className="price-heading" >Price: {values.price}/-</h4>
               <span>{values.description}</span><br/>

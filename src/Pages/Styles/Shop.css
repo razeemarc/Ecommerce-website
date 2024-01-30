@@ -104,3 +104,8 @@ body {
 .buttonStyle:hover {
     background-color: var(--hoverColor);
 }
+.checkout-button{
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+}

@@ -10,7 +10,7 @@ function Success() {
     setInterval(() => {setCount((count) => count - 1); }, 1000);
     setTimeout(() => navigate("/"), 15000);}, [navigate]);
   return (
-    <div>
+    <div className="d-flex justify-content-center pt-4 pb-4">
       Your Order have been placed successfully.You will be redirected in {count}
       seconds
     </div>

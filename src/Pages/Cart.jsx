@@ -25,9 +25,9 @@ function Cart() {
     <>
       <Navbar/>
     
-    <div style={{marginTop: "120px"}}>
-      <div className="d-flex justify-content-center mt-1">
-        <h4>Your cart items</h4>
+    <div style={{marginTop: "120px"}} >
+      <div className="d-flex justify-content-center pt-4 pb-4">
+        {list.length > 0 ? (<h4>Your cart items</h4>):''}
       </div>
       {list.length > 0 ? (
         <>
@@ -40,10 +40,12 @@ function Cart() {
             removeItemFromCart={() => removeItemFromCart(item)}
           />
         ))}
+        <div className='checkout-button'>
         <button className="buttonStyle " onClick={()=>navigate('/checkout')}>Go to checkout</button>
+        </div>
         </>
       ) : (
-        <h3>No item in the cart</h3>
+        <h3 className="d-flex justify-content-center">No item in the cart</h3>
       )}
     </div>
     </>
