@@ -26,12 +26,9 @@ body {
 
 }
 
-@media screen and (max-width:900px) {
-    .dropdown {
-        font-size: 10px;
-        width: 130px;
-        height: 30px;
-    }
+.catStyle {
+    cursor: pointer;
+    padding-left: 15px;
 }
 
 .dropdown:focus {
@@ -45,14 +42,7 @@ body {
     grid-template-columns: 1fr auto;
 }
 
-@media screen and (max-width:900px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
 
-    }
-
-}
 
 .shop-container {
     display: grid;
@@ -60,32 +50,41 @@ body {
     gap: 1rem;
 }
 
+
+
+
+
 @media screen and (max-width:900px) {
-    .shop-container {
+    .dropdown {
+        font-size: 10px;
+        width: 130px;
+        height: 30px;
+    }
+
+    .container {
         display: grid;
         grid-template-columns: 1fr;
     }
-}
+
+    .shop-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .category-title {
+        font-size: 10px;
 
 
-@media screen and (max-width:900px) {
+    }
+
     .categorySection-container {
         display: grid;
         grid-template-columns: 3fr 1fr;
         column-gap: 10px;
         font-size: 10px;
     }
-}
 
-@media screen and (max-width:900px) {
-    .category-tag {
-        margin-top: -10px;
-    }
 
-    .category-title {
-        font-size: 10px;
-
-    }
 }
 
 .category-title {
@@ -104,8 +103,9 @@ body {
 .buttonStyle:hover {
     background-color: var(--hoverColor);
 }
-.checkout-button{
-    display:flex;
+
+.checkout-button {
+    display: flex;
     justify-content: center;
     margin-top: 20px;
 }

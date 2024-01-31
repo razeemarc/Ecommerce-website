@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Styles/Shop.css";
-import { Card } from "react-bootstrap";
+import ProductCard from "./Components/ProductCard";
 import ProductList from "./Components/ProductList";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
@@ -8,10 +8,7 @@ import Navbar from "./Components/Navbar";
 
 
 function Shop() {
-  const catstyle = {
-    cursor: "pointer",
-    paddingLeft: "15px",
-  };
+  
 
   const navigate =useNavigate();
 
@@ -58,7 +55,7 @@ function Shop() {
                 <label>
                   
                   <input
-                    style={catstyle}
+                    className='catStyle'
                     type="checkbox"
                     onChange={defaultChange}
                   />
@@ -67,13 +64,13 @@ function Shop() {
                 <br />
                 <label>
                   
-                  <input style={catstyle} onChange={()=>filterResult("ios")}  type="checkbox" /> ios
+                  <input className='catStyle' onChange={()=>filterResult("ios")}  type="checkbox" /> ios
                 </label>
               
               <br />
                 <label>
                   
-                  <input style={catstyle} onChange={()=>filterResult("Android")}  type="checkbox" /> Android
+                  <input className='catStyle' onChange={()=>filterResult("Android")}  type="checkbox" /> Android
                 </label>
               </div>
             </div>
@@ -81,18 +78,18 @@ function Shop() {
             <div className="category-tag">
               <span className="category-title">Tag</span>
               <br />
-              <span onClick={() => filterTagResult("Xiaomi")} style={catstyle}>
+              <span  onClick={() => filterTagResult("Xiaomi")} className='catStyle'>
                 
                 Xiaomi
               </span>
               <br />
 
-              <span onClick={() => filterTagResult("Oneplus")} style={catstyle}>
+              <span onClick={() => filterTagResult("Oneplus")} className='catStyle'>
                 
                 Oneplus
               </span>
               <br />
-              <span onClick={() => filterTagResult("Apple")} style={catstyle}>
+              <span onClick={() => filterTagResult("Apple")} className='catStyle'>
                 
                 Apple
               </span>
@@ -121,27 +118,14 @@ function Shop() {
           </div>
           {/*Product Section*/}
           <div className="shop-container" >
-            {data.map((values) => (
-              <div key={values.id}>
-                <Card
-                  style={{
-                    width: "14rem",
-                    border: "none",
-                    borderRadius: "10px",
-                  }}
-                >
-                  <Card.Img variant="top"  src={values.image} height='180px'  style={{cursor:'pointer'}} onClick={()=>navigate(`/product/${values.id}`)}/>
-                  <Card.Body>
-                    <Card.Title>{values.title}</Card.Title>
-                    <p>Price: {values.price}/-</p>
-
-                
-                
-             
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
+          
+         
+          
+          {data.map((values) => (
+            <ProductCard key={values.id} product={values} />
+          ))}
+        
+        
           </div>
         </div>
       </div>
