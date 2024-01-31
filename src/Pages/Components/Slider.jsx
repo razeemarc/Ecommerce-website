@@ -26,9 +26,9 @@ const Slider = () => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide><img src={Banner1} alt='Banner1'   width='100%' height='250px'  /></SwiperSlide>
-      <SwiperSlide><img src={Banner2} alt='Banner1'  width='100%' height='250px'  /></SwiperSlide>
-      <SwiperSlide><img src={Banner4} alt='Banner1'  width='100%' height='250px' /></SwiperSlide>
+      <SwiperSlide><img src={Banner2} alt='Banner1'   width='100%' height='250px'  /></SwiperSlide>
+      <SwiperSlide><img src={Banner1} alt='Banner2'  width='100%' height='250px'  /></SwiperSlide>
+      <SwiperSlide><img src={Banner4} alt='Banner3'  width='100%' height='250px' /></SwiperSlide>
     </Swiper>
   );
 };

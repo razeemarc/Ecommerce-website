@@ -36,7 +36,7 @@ function Product() {
           
           <div className="product-container">
             <div className="productImage-section">
-              <img src={values.image} alt="product" />
+              <img src={values.image} alt="product" height="300px" />
             </div>
 
             <div >

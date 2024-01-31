@@ -24,6 +24,12 @@ function Shop() {
     });
     setData(result);
   };
+  const filterTagResult = (catItem) => {
+    const result = ProductList.filter((curData) => {
+      return curData.brand.includes(catItem);
+    });
+    setData(result);
+  };
   //function definition for Dropdown menu
   const defaultChange = () => {
     setData(ProductList);
@@ -36,16 +42,14 @@ function Shop() {
     const result = [...data].sort((a, b) => a.price - b.price);
     setData(result);
   };
-
+ 
   return (
     <div>
     
     <Navbar/>
       <div className="container" style={{marginTop: "120px"}}>
         <div style={{ width: "175px" }}>
-        {alert && (
-          <span className="alert alert-success">Item added to Cart</span>
-        )}
+       
           {/*Category Section */}
           <div className="categorySection-container">
             <div>
@@ -63,7 +67,13 @@ function Shop() {
                 <br />
                 <label>
                   
-                  <input style={catstyle} type="checkbox" /> Turmeric
+                  <input style={catstyle} onChange={()=>filterResult("ios")}  type="checkbox" /> ios
+                </label>
+              
+              <br />
+                <label>
+                  
+                  <input style={catstyle} onChange={()=>filterResult("Android")}  type="checkbox" /> Android
                 </label>
               </div>
             </div>
@@ -71,20 +81,20 @@ function Shop() {
             <div className="category-tag">
               <span className="category-title">Tag</span>
               <br />
-              <span onClick={() => filterResult("Turmeric")} style={catstyle}>
+              <span onClick={() => filterTagResult("Xiaomi")} style={catstyle}>
                 
-                Turmeric
+                Xiaomi
               </span>
               <br />
 
-              <span onClick={() => filterResult("Dried")} style={catstyle}>
+              <span onClick={() => filterTagResult("Oneplus")} style={catstyle}>
                 
-                Dried
+                Oneplus
               </span>
               <br />
-              <span onClick={() => filterResult("Dried")} style={catstyle}>
+              <span onClick={() => filterTagResult("Apple")} style={catstyle}>
                 
-                Nizamabad
+                Apple
               </span>
             </div>
           </div>
@@ -115,12 +125,12 @@ function Shop() {
               <div key={values.id}>
                 <Card
                   style={{
-                    width: "18rem",
+                    width: "14rem",
                     border: "none",
                     borderRadius: "10px",
                   }}
                 >
-                  <Card.Img variant="top" src={values.image} style={{cursor:'pointer'}} onClick={()=>navigate(`/product/${values.id}`)}/>
+                  <Card.Img variant="top"  src={values.image} height='180px'  style={{cursor:'pointer'}} onClick={()=>navigate(`/product/${values.id}`)}/>
                   <Card.Body>
                     <Card.Title>{values.title}</Card.Title>
                     <p>Price: {values.price}/-</p>
