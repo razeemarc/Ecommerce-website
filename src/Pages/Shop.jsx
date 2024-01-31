@@ -46,7 +46,11 @@ function Shop() {
     <Navbar/>
       <div className="container" style={{marginTop: "120px"}}>
         <div style={{ width: "175px" }}>
+<<<<<<< HEAD
        
+=======
+        
+>>>>>>> origin/main
           {/*Category Section */}
           <div className="categorySection-container">
             <div>
