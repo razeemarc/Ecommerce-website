@@ -43,9 +43,7 @@ function Shop() {
     <Navbar/>
       <div className="container" style={{marginTop: "120px"}}>
         <div style={{ width: "175px" }}>
-        {alert && (
-          <span className="alert alert-success">Item added to Cart</span>
-        )}
+        
           {/*Category Section */}
           <div className="categorySection-container">
             <div>
