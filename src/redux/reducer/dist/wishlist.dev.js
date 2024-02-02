@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.addItemWishList = exports.wishSlice = void 0;
+exports["default"] = exports.removeItemWishList = exports.addItemWishList = exports.wishSlice = void 0;
 
 var _toolkit = require("@reduxjs/toolkit");
 
@@ -24,11 +24,23 @@ var wishSlice = (0, _toolkit.createSlice)({
     addItemWishList: function addItemWishList(state, _ref) {
       var payload = _ref.payload;
       state.list = [].concat(_toConsumableArray(state.list), [payload]);
+    },
+    removeItemWishList: function removeItemWishList(state, _ref2) {
+      var payload = _ref2.payload;
+      //Finding Index of the product
+      var index = state.list.findIndex(function (product) {
+        return product.id === payload.id;
+      }); //Remove Product From the list
+
+      state.list = [].concat(_toConsumableArray(state.list.slice(0, index)), _toConsumableArray(state.list.slice(index + 1)));
     }
   }
 });
 exports.wishSlice = wishSlice;
-var addItemWishList = wishSlice.actions.addItemWishList;
+var _wishSlice$actions = wishSlice.actions,
+    addItemWishList = _wishSlice$actions.addItemWishList,
+    removeItemWishList = _wishSlice$actions.removeItemWishList;
+exports.removeItemWishList = removeItemWishList;
 exports.addItemWishList = addItemWishList;
 var _default = wishSlice.reducer;
 exports["default"] = _default;

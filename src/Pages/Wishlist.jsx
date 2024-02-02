@@ -1,14 +1,20 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import ProductListItem from './Components/ProductListItem'
-
+import { useDispatch, useSelector } from 'react-redux'
+import WishlistCard from './Components/WishlistCard'
+import { removeItemWishList } from '../redux/reducer/wishlist'
 const Wishlist = () => {
-    const list=useSelector((state)=>state.wish.list)
+    const list=useSelector((state)=>state.wish.list);
+    const dispatch = useDispatch();
+    const removeItemFromWish = (item) => {
+      dispatch(removeItemWishList(item))};
   return (
     <> 
     <h3 className="d-flex justify-content-center mt-4">Your Wishlist Items</h3>
     {list.map((item)=>(
-      <ProductListItem {...item} key={item.id}/>
+      <WishlistCard {...item} key={item.id}
+      removeItemFromWish={() => removeItemFromWish(item)}
+      />
+
     ))}
     </>
   )
